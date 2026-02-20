@@ -1,10 +1,11 @@
 const express = require('express'); // importa el framework Express para crear el servidor
 const mysql = require('mysql2'); // importa el cliente MySQL
+const path = require('path');
 
 const app = express(); // crea la instancia de la aplicación Express
 
 app.use(express.json()); // middleware para parsear JSON en el cuerpo de las peticiones
-app.use(express.static('public')); // sirve archivos estáticos desde la carpeta 'public'
+app.use(express.static(path.join(__dirname, 'docs'))); // sirve archivos estáticos desde la carpeta 'docs'
 
 const connection = mysql.createConnection({ // configura la conexión a la base de datos
     host: 'localhost', // host de la base de datos
