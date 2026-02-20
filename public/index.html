@@ -1,0 +1,102 @@
+<!DOCTYPE html> <!-- declara tipo de documento HTML -->
+<html lang="es"> <!-- establece idioma español -->
+<head>
+    <meta charset="UTF-8"> <!-- codificación de caracteres -->
+    <title>Registro de Cursos</title> <!-- título de la pestaña -->
+
+    <!-- Evitar caché -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" /> <!-- evita caché del navegador -->
+    <meta http-equiv="Pragma" content="no-cache" /> <!-- compatibilidad contra cache -->
+    <meta http-equiv="Expires" content="0" /> <!-- expira inmediatamente -->
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> <!-- estilos Bootstrap -->
+
+    <!-- Estilos propios -->
+    <link rel="stylesheet" href="styles.css"> <!-- hoja de estilos local -->
+
+    <!-- Toastr -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css"> <!-- estilos Toastr -->
+</head>
+
+<body>
+
+<div class="container mt-5"> <!-- contenedor principal con margen superior -->
+
+    <h2 class="text-center">Registro de Cursos</h2> <!-- título centrado -->
+
+    <form id="formCurso" class="mb-4"> <!-- formulario para crear/editar cursos -->
+        <input type="hidden" id="id"> <!-- campo oculto para el id en edición -->
+
+        <div class="row"> <!-- fila de inputs -->
+            <div class="col-md-6">
+                <input type="text" id="nombre_curso" class="form-control mb-3" placeholder="Nombre del Curso" required> <!-- nombre del curso -->
+            </div>
+
+            <div class="col-md-6">
+                <input type="text" id="nombre_instructor" class="form-control mb-3" placeholder="Nombre del Instructor" required> <!-- nombre del instructor -->
+            </div>
+
+            <div class="col-md-4">
+                <input type="number" id="numero_horas" class="form-control mb-3" placeholder="Número de horas" required> <!-- número de horas -->
+            </div>
+
+            <div class="col-md-4">
+                <select id="nivel" class="form-control mb-3" required> <!-- nivel del curso -->
+                    <option value="">Seleccione Nivel</option> <!-- opción por defecto -->
+                    <option value="Básico">Básico</option> <!-- opción básico -->
+                    <option value="Intermedio">Intermedio</option> <!-- opción intermedio -->
+                    <option value="Avanzado">Avanzado</option> <!-- opción avanzado -->
+                </select>
+            </div>
+
+            <div class="col-md-4">
+                <input type="date" id="fecha_inicio" class="form-control mb-3" required> <!-- fecha de inicio -->
+            </div>
+
+            <div class="col-md-6">
+                <input type="number" step="0.01" id="costo" class="form-control mb-3" placeholder="Costo del Curso" required> <!-- costo del curso -->
+            </div>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100"> <!-- botón para enviar formulario -->
+            Guardar Curso
+        </button>
+    </form>
+
+    <hr>
+
+    <h4 class="mb-3">Lista de Cursos</h4> <!-- sección de lista -->
+
+    <div class="table-responsive"> <!-- tabla responsiva -->
+        <table class="table table-bordered table-hover"> <!-- tabla con borde y hover -->
+            <thead class="table-dark"> <!-- encabezado oscuro -->
+                <tr>
+                    <th>Curso</th> <!-- columna curso -->
+                    <th>Instructor</th> <!-- columna instructor -->
+                    <th>Horas</th> <!-- columna horas -->
+                    <th>Nivel</th> <!-- columna nivel -->
+                    <th>Inicio</th> <!-- columna inicio -->
+                    <th>Costo</th> <!-- columna costo -->
+                    <th>Acciones</th> <!-- columna acciones -->
+                </tr>
+            </thead>
+            <tbody id="tablaCursos"> <!-- cuerpo donde se insertan filas dinámicamente -->
+                <!-- Aquí se cargan dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<!-- Toastr JS -->
+<!-- jQuery (necesario para Toastr) -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- jQuery necesario para algunos plugins -->
+<!-- Toastr JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script> <!-- librería Toastr para notificaciones -->
+
+<!-- Script principal -->
+<script src="main.js"></script> <!-- script de la aplicación -->
+
+</body>
+</html>

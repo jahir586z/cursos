@@ -1,0 +1,83 @@
+/* Fondo general */
+body { /* cuerpo del documento */
+    background: linear-gradient(135deg, #1f4037, #99f2c8); /* degradado de fondo */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* tipografía */
+    min-height: 100vh; /* asegura altura mínima */
+}
+
+/* Contenedor principal */
+.container { /* caja blanca central */
+    background: white; /* fondo blanco para contraste */
+    padding: 30px; /* espacio interno */
+    border-radius: 15px; /* esquinas redondeadas */
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* sombra sutil */
+}
+
+/* Título */
+h2 { /* estilo del título principal */
+    font-weight: bold; /* negrita */
+    color: #1f4037; /* color principal */
+    margin-bottom: 20px; /* separación inferior */
+}
+
+/* Inputs */
+.form-control { /* inputs con estilo */
+    border-radius: 10px; /* bordes redondeados */
+    border: 1px solid #ccc; /* borde gris */
+    transition: 0.3s ease; /* transición suave */
+}
+
+.form-control:focus { /* cuando el input está enfocado */
+    border-color: #1f4037; /* cambia color del borde */
+    box-shadow: 0 0 8px rgba(31, 64, 55, 0.4); /* resplandor sutil */
+}
+
+/* Botón principal */
+.btn-primary { /* estilo del botón principal */
+    background-color: #1f4037; /* color de fondo */
+    border: none; /* sin borde */
+    border-radius: 10px; /* redondeo */
+    padding: 8px 20px; /* espacio interno */
+    transition: 0.3s ease; /* transición suave */
+}
+
+.btn-primary:hover { /* efecto hover */
+    background-color: #16302a; /* color más oscuro */
+    transform: scale(1.05); /* ligero aumento de tamaño */
+}
+
+/* Botón editar */
+.btn-warning { /* estilo específico para botones de advertencia */
+    border-radius: 8px; /* redondeo */
+}
+
+/* Botón eliminar */
+.btn-danger { /* estilo para botones de peligro */
+    border-radius: 8px; /* redondeo */
+}
+
+/* Tabla */
+table { /* estilo general de tabla */
+    background: white; /* fondo blanco */
+    border-radius: 10px; /* esquinas redondeadas */
+    overflow: hidden; /* recorta contenido que desborda */
+}
+
+table thead { /* encabezado de la tabla */
+    background-color: #1f4037; /* color de fondo del thead */
+    color: white; /* texto en blanco */
+}
+
+table tbody tr:hover { /* efecto hover en filas */
+    background-color: #f2f2f2; /* color de fondo al pasar el cursor */
+    transition: 0.2s ease; /* transición suave */
+}
+
+/* Animación suave */
+button { /* transición para botones */
+    transition: 0.2s ease; /* transición para transform */
+}
+
+button:hover { /* efecto hover para botones */
+    transform: scale(1.05); /* escala ligera */
+}
